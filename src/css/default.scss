@@ -1,0 +1,40 @@
+$main-color: #39f;
+$text-color1: #666;
+$text-color2: #fff;
+
+// from coolors
+$color1: rgba(0, 117, 189, 1);
+$color2: rgba(46, 142, 201, 1);
+$color3: rgba(69, 154, 207, 1);
+$color4: rgba(92, 167, 213, 1);
+$color5: rgba(232, 232, 232, 1);
+
+.main-container {
+    //background-image: url('~/img/background.jpg');
+    background-color: $color1;
+    height: 70vh;
+    width: 100%;
+}
+
+.main-uk-card {
+    margin-top: 20vh;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.second-container {
+    margin-top: 10vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+#footer {
+    height: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    background-color: $color1;
+    text-align: center;
+    color: $text-color2;
+}
