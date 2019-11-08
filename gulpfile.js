@@ -62,7 +62,7 @@ function buildJs() {
 }
 
 function distImg() {
-    return gulp.src(['src/img/*.*'])
+    return gulp.src(['src/img/**/*.*'])
         .pipe(gulp.dest('dist/img'))
         .pipe(browserSync.stream());
 }

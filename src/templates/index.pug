@@ -1,6 +1,8 @@
 - var lorem0 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget, dignissim pulvinar est. Maecenas volutpat nisi viverra, molestie tortor id, dictum nisl. Donec lacus urna, congue ut tellus vel, maximus rhoncus ligula. Morbi varius eget elit quis posuere. Vestibulum ut erat gravida, luctus massa eget, condimentum urna. Sed id laoreet mi, at vulputate diam. Integer in sem sed nunc faucibus elementum. Suspendisse tempor est nec sem vehicula finibus. Praesent cursus dapibus odio, sit amet tempor neque vulputate vel. Aenean viverra, urna nec commodo aliquet, magna justo vulputate libero, vitae eleifend risus dui aliquet magna. Praesent sollicitudin mauris a dolor aliquet, sit amet convallis est rhoncus. Vivamus commodo purus eget massa aliquet vulputate. Nunc vitae nisi pretium, mollis tortor sit amet, dapibus magna. Sed faucibus nunc in sapien condimentum, eget aliquam lectus scelerisque. Donec dignissim augue eget lacus condimentum, ut blandit sapien dapibus. Donec egestas augue a malesuada dapibus. Morbi egestas arcu sem, viverra consequat quam tristique id. Nam id dictum elit. Vivamus non tortor vitae sapien iaculis cursus vel id velit. Vestibulum scelerisque nisl purus, sit amet tristique augue tincidunt at. Curabitur consequat nunc sit amet volutpat elementum. Donec ex ligula, rhoncus et nisi quis, commodo ullamcorper urna. Proin a magna vestibulum, gravida tellus a, imperdiet nulla. Suspendisse porttitor urna id lacus gravida imperdiet. Nam convallis massa in orci accumsan condimentum. Nullam diam orci, cursus vitae nunc et, vestibulum vulputate diam. Sed non vulputate ex, eget pretium urna. Aenean blandit viverra malesuada. Etiam viverra aliquet scelerisque. Suspendisse potenti. Cras at volutpat odio, in sollicitudin enim. In posuere mauris in magna feugiat varius. Duis ac dignissim sapien, at ultricies nisi. Etiam fermentum enim nisi, at consectetur ipsum pharetra at. Duis et dictum libero. Aliquam neque ligula, semper at varius non, dictum at sem. Cras pretium augue eu urna lacinia bibendum. Fusce iaculis tempor commodo. Aliquam blandit nunc sed finibus condimentum. Suspendisse eleifend mauris eget ligula ultricies, non finibus risus facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi semper libero sed nisi aliquet maximus. Nullam vestibulum turpis quis ligula maximus interdum. Donec vitae porttitor turpis, sed ornare neque. Maecenas et porttitor ligula. Sed vestibulum molestie venenatis. Suspendisse id augue non purus pellentesque semper. Pellentesque nunc eros, facilisis sed magna ut, vehicula volutpat massa. Pellentesque feugiat varius posuere. Praesent ac suscipit orci, vitae ullamcorper ipsum. Cras at mi diam. Integer pretium mauris vel ullamcorper sagittis. Vestibulum tempor id enim id placerat. Proin rhoncus non arcu vitae mollis. Donec pretium mauris vel enim viverra, ac maximus urna aliquet. Integer sed libero pharetra quam tempus tincidunt. Phasellus nec commodo metus. Cras ac ex maximus, tincidunt diam quis, efficitur felis. Praesent ut condimentum mauris."
 - var lorem1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget, dignissim pulvinar est. Maecenas volutpat nisi viverra, molestie tortor id, dictum nisl. Donec lacus urna, congue ut tellus vel, maximus rhoncus ligula. Morbi varius eget elit quis posuere. "
-- var lorem2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+- var lorem2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget"
+- var footertext = "© 2019"
+- var myname = "Andita K. Fahmi"
 
 
 doctype html
@@ -11,15 +13,64 @@ html
         title Main Index
     body
         include includes/main-navbar.pug
-        .main-container.uk-flex.uk-flex-center
-            .main-uk-card.uk-card.uk-card-default.uk-card-body #{lorem2}
-            .main-uk-card.uk-card.uk-card-default.uk-card-body.uk-margin-left #{lorem2}
 
-        .second-container.uk-flex.uk-flex-center
-            div 
-                p #{lorem0}
-            div
-                p #{lorem1}
+        // bigtitle
+        .main-container
+            .main-container-info.uk-flex.uk-flex-center
+                .main-profile-info.main-profile-left.uk-card.uk-card-body #{lorem2}
+                .main-profile-pic.uk-card.uk-card-hover.uk-margin-medium-left
+                    img(src="img/person.png")
+                .main-profile-info.main-profile-right.uk-card.uk-card-body.uk-margin-medium-left
+                    p.main-profile-name #{myname}
+                    a(href="#")
+                        img(src="img/linkedin.svg")
+                    a(href="#", class="uk-margin-small-left")
+                        img(src="img/github.svg")
+                    a(href="#", class="uk-margin-small-left")
+                        img(src="img/facebook.svg")
+                    a(href="#", class="uk-margin-small-left")
+                        img(src="img/twitter.svg")
+                    a(href="#", class="uk-margin-small-left")
+                        img(src="img/telegram.svg")
 
+        .second-container#myworks
+            .uk-position-relative.uk-visible-toggle.uk-light(tabindex="-1", uk-slider="center: true")
+                ul.uk-slider-items.uk-grid.second-container-slider
+                    li
+                        .uk-card.uk-card-default.card-showcase
+                            .uk-card-media-top.card-showcase-container
+                                img(src="img/examples/image1.jpg")
+                            .uk-card-body.card-desc
+                                h3 This is my work
+                                p #{lorem2}
+                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
+                    li
+                        .uk-card.uk-card-default.card-showcase
+                            .uk-card-media-top.card-showcase-container
+                                img(src="img/examples/image2.jpg")
+                            .uk-card-body.card-desc
+                                h3 This is my work
+                                p #{lorem2}
+                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
+                    li
+                        .uk-card.uk-card-default.card-showcase
+                           .uk-card-media-top.card-showcase-container
+                                img(src="img/examples/image3.jpg")
+                           .uk-card-body.card-desc
+                                h3 This is my work
+                                p #{lorem2}
+                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
+                    li
+                        .uk-card.uk-card-default.card-showcase.uk-card-hover
+                            .uk-card-media-top.card-showcase-container
+                                img(src="img/examples/image4.jpg")
+                            .uk-card-body.card-desc
+                                h3 This is my work
+                                p #{lorem2}
+                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
+                
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
         footer#footer
-            p (c) 2019
+            p #{footertext}

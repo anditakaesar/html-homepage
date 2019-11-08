@@ -10,23 +10,81 @@ $color4: rgba(92, 167, 213, 1);
 $color5: rgba(232, 232, 232, 1);
 
 .main-container {
-    //background-image: url('~/img/background.jpg');
     background-color: $color1;
-    height: 70vh;
+    height: 60vh;
     width: 100%;
 }
 
-.main-uk-card {
-    margin-top: 20vh;
+.main-container-info {
+    padding-top: 20vh;
+}
+
+.main-profile-pic {
+    position: relative;
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-profile-pic img {
+    min-width: 100%;
+    height: auto;
+}
+
+.main-profile-name {
+    font-size: 40px;
+    color: $text-color2;
+}
+
+.main-profile-info {
+    position: relative;
+    height: 200px;
+    width: 500px;
+}
+
+.main-profile-right {
+    background-color: $color1;
+    color: #fff;
+}
+
+.main-profile-right img {
+    width: 50px;
+}
+
+.main-profile-left {
+    color: #fff;
 }
 
 .second-container {
     margin-top: 10vh;
     margin-left: 20vh;
     margin-right: 20vh;
+}
+
+.second-container-slider {
+    margin-bottom: 10vh;
+}
+
+.card-showcase {
+    width: 500px;
+}
+
+.card-showcase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-showcase img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.card-desc h3, p {
+    color: $text-color1;
 }
 
 #footer {
@@ -36,5 +94,8 @@ $color5: rgba(232, 232, 232, 1);
     padding-top: 20px;
     background-color: $color1;
     text-align: center;
+}
+
+#footer p {
     color: $text-color2;
 }
