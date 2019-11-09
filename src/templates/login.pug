@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        include includes/main-header.pug
+        title Please Login
+    body#body-login
+        .login-container
+            include includes/main-navbar.pug
+            form.uk-position-center.uk-card.uk-card-default(action="/login.html", method="get")
+                .uk-card-body(style="width: 500px;")
+                    .uk-margin
+                        h4 Please Login
+                    .uk-margin
+                        .uk-inline
+                            span.uk-form-icon(uk-icon="icon: user")
+                            input.uk-input.uk-form-width-large(type="text", placeholder="username", name="username")
+                    .uk-margin
+                        .uk-inline
+                            span.uk-form-icon(uk-icon="icon: lock")
+                            input.uk-input.uk-form-width-large(type="password", placeholder="password", name="password")
+                    .uk-margin
+                        input.uk-button.uk-button-primary(type="submit", value="Login")

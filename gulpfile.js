@@ -97,7 +97,7 @@ function serve() {
         buildJs();
     });
 
-    gulp.watch('src/img').on('change', () => {
+    gulp.watch('src/img/**/*.*').on('change', () => {
         cleanImg();
         distImg();
     });

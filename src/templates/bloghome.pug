@@ -1,0 +1,39 @@
+- var lorem1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget, dignissim pulvinar est. Maecenas volutpat nisi viverra, molestie tortor id, dictum nisl. Donec lacus urna, congue ut tellus vel, maximus rhoncus ligula. Morbi varius eget elit quis posuere. "
+- var footertext = "© 2019"
+
+doctype html
+html
+    head
+        include includes/main-header.pug
+        link(href="css/default.css",rel="stylesheet")
+        title Main Index
+    body
+        include includes/main-navbar.pug
+        .uk-container.blog-container
+            .uk-card.uk-card-default.uk-margin
+                .uk-card-body
+                    h3 Blog Title1
+                    p 2019-10-31
+                    p #{lorem1}
+            .uk-card.uk-card-default.uk-margin
+                .uk-card-body
+                    h3 Blog Title 2
+                    p 2019-10-29
+                    p #{lorem1}
+            .uk-card.uk-card-default.uk-margin
+                .uk-card-body
+                    h3 Blog Title 3
+                    p 2019-10-28
+                    p #{lorem1}
+            .uk-card.uk-card-default.uk-margin
+                .uk-card-body
+                    h3 Blog Title 4
+                    p 2019-10-28
+                    p #{lorem1}
+            .uk-card.uk-card-default.uk-margin
+                .uk-card-body
+                    h3 Blog Title 5
+                    p 2019-10-28
+                    p #{lorem1}
+        
+        include includes/footer.pug

@@ -9,6 +9,12 @@ $color3: rgba(69, 154, 207, 1);
 $color4: rgba(92, 167, 213, 1);
 $color5: rgba(232, 232, 232, 1);
 
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
 .main-container {
     background-color: $color1;
     height: 60vh;
@@ -45,7 +51,7 @@ $color5: rgba(232, 232, 232, 1);
 
 .main-profile-right {
     background-color: $color1;
-    color: #fff;
+    color: $color5;
 }
 
 .main-profile-right img {
@@ -53,17 +59,13 @@ $color5: rgba(232, 232, 232, 1);
 }
 
 .main-profile-left {
-    color: #fff;
+    color: $color5;
 }
 
 .second-container {
     margin-top: 10vh;
     margin-left: 20vh;
     margin-right: 20vh;
-}
-
-.second-container-slider {
-    margin-bottom: 10vh;
 }
 
 .card-showcase {
@@ -87,9 +89,20 @@ $color5: rgba(232, 232, 232, 1);
     color: $text-color1;
 }
 
+.blog-container {
+    background-color: $color5;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#body-login {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
 #footer {
     height: 10vh;
-    margin-top: 10vh;
     margin-bottom: 0px;
     padding-top: 20px;
     background-color: $color1;

@@ -9,9 +9,8 @@ doctype html
 html
     head
         include includes/main-header.pug
-        link(href="css/default.css",rel="stylesheet")
         title Main Index
-    body
+    body#home
         include includes/main-navbar.pug
 
         // bigtitle
@@ -19,7 +18,7 @@ html
             .main-container-info.uk-flex.uk-flex-center
                 .main-profile-info.main-profile-left.uk-card.uk-card-body #{lorem2}
                 .main-profile-pic.uk-card.uk-card-hover.uk-margin-medium-left
-                    img(src="img/person.png")
+                    img(src="img/profile.png")
                 .main-profile-info.main-profile-right.uk-card.uk-card-body.uk-margin-medium-left
                     p.main-profile-name #{myname}
                     a(href="#")
@@ -33,44 +32,43 @@ html
                     a(href="#", class="uk-margin-small-left")
                         img(src="img/telegram.svg")
 
+        // myworks
         .second-container#myworks
-            .uk-position-relative.uk-visible-toggle.uk-light(tabindex="-1", uk-slider="center: true")
-                ul.uk-slider-items.uk-grid.second-container-slider
-                    li
-                        .uk-card.uk-card-default.card-showcase
-                            .uk-card-media-top.card-showcase-container
-                                img(src="img/examples/image1.jpg")
-                            .uk-card-body.card-desc
-                                h3 This is my work
-                                p #{lorem2}
-                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
-                    li
-                        .uk-card.uk-card-default.card-showcase
-                            .uk-card-media-top.card-showcase-container
-                                img(src="img/examples/image2.jpg")
-                            .uk-card-body.card-desc
-                                h3 This is my work
-                                p #{lorem2}
-                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
-                    li
-                        .uk-card.uk-card-default.card-showcase
-                           .uk-card-media-top.card-showcase-container
-                                img(src="img/examples/image3.jpg")
-                           .uk-card-body.card-desc
-                                h3 This is my work
-                                p #{lorem2}
-                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
-                    li
-                        .uk-card.uk-card-default.card-showcase.uk-card-hover
-                            .uk-card-media-top.card-showcase-container
-                                img(src="img/examples/image4.jpg")
-                            .uk-card-body.card-desc
-                                h3 This is my work
-                                p #{lorem2}
-                                a(href="#").uk-button.uk-button-primary.uk-button-small Read More
-                
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-            
-        footer#footer
-            p #{footertext}
+            div(uk-slider="center: true")
+                .uk-position-relative.uk-visible-toggle.uk-dark(tabindex="-1")
+                    ul(class="uk-slider-items uk-child-width-1-2@s uk-grid")
+                        li
+                            .uk-card.uk-card-default
+                                .uk-card-media-top
+                                    img(src="img/examples/image1.jpg", alt="")
+                                .uk-card-body
+                                    h3.uk-card-title Headline
+                                    p #{lorem2}
+                        li
+                            .uk-card.uk-card-default
+                                .uk-card-media-top
+                                    img(src="img/examples/image2.jpg", alt="")
+                                .uk-card-body
+                                    h3.uk-card-title Headline
+                                    p #{lorem2}
+                        li
+                            .uk-card.uk-card-default
+                                .uk-card-media-top
+                                    img(src="img/examples/image3.jpg", alt="")
+                                .uk-card-body
+                                    h3.uk-card-title Headline
+                                    p #{lorem2}
+                        li
+                            .uk-card.uk-card-default
+                                .uk-card-media-top
+                                    img(src="img/examples/image4.jpg", alt="")
+                                .uk-card-body
+                                    h3.uk-card-title Headline
+                                    p #{lorem2}
+                        
+                    a.uk-position-center-left.uk-position-small.uk-hidden-hover(href="#", uk-slidenav-previous, uk-slider-item="previous")
+                    a.uk-position-center-right.uk-position-small.uk-hidden-hover(href="#", uk-slidenav-next, uk-slider-item="next")
+
+                .uk-slider-nav.uk-dotnav.uk-flex-center.uk-margin.uk-light
+
+        include includes/footer.pug
