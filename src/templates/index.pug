@@ -8,67 +8,12 @@
 doctype html
 html
     head
-        include includes/main-header.pug
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(href="css/vendor/uikit.min.css", rel="stylesheet")
+        link(href="css/default.css", rel="stylesheet")
+        script(src="js/vendor/uikit.min.js")
+        script(src="js/vendor/uikit-icons.min.js")
         title Main Index
     body#home
-        include includes/main-navbar.pug
-
-        // bigtitle
-        .main-container
-            .main-container-info.uk-flex.uk-flex-center
-                .main-profile-info.main-profile-left.uk-card.uk-card-body #{lorem2}
-                .main-profile-pic.uk-card.uk-card-hover.uk-margin-medium-left
-                    img(src="img/profile.png")
-                .main-profile-info.main-profile-right.uk-card.uk-card-body.uk-margin-medium-left
-                    p.main-profile-name #{myname}
-                    a(href="#")
-                        img(src="img/linkedin.svg")
-                    a(href="#", class="uk-margin-small-left")
-                        img(src="img/github.svg")
-                    a(href="#", class="uk-margin-small-left")
-                        img(src="img/facebook.svg")
-                    a(href="#", class="uk-margin-small-left")
-                        img(src="img/twitter.svg")
-                    a(href="#", class="uk-margin-small-left")
-                        img(src="img/telegram.svg")
-
-        // myworks
-        .second-container#myworks
-            div(uk-slider="center: true")
-                .uk-position-relative.uk-visible-toggle.uk-dark(tabindex="-1")
-                    ul(class="uk-slider-items uk-child-width-1-2@s uk-grid")
-                        li
-                            .uk-card.uk-card-default
-                                .uk-card-media-top
-                                    img(src="img/examples/image1.jpg", alt="")
-                                .uk-card-body
-                                    h3.uk-card-title Headline
-                                    p #{lorem2}
-                        li
-                            .uk-card.uk-card-default
-                                .uk-card-media-top
-                                    img(src="img/examples/image2.jpg", alt="")
-                                .uk-card-body
-                                    h3.uk-card-title Headline
-                                    p #{lorem2}
-                        li
-                            .uk-card.uk-card-default
-                                .uk-card-media-top
-                                    img(src="img/examples/image3.jpg", alt="")
-                                .uk-card-body
-                                    h3.uk-card-title Headline
-                                    p #{lorem2}
-                        li
-                            .uk-card.uk-card-default
-                                .uk-card-media-top
-                                    img(src="img/examples/image4.jpg", alt="")
-                                .uk-card-body
-                                    h3.uk-card-title Headline
-                                    p #{lorem2}
-                        
-                    a.uk-position-center-left.uk-position-small.uk-hidden-hover(href="#", uk-slidenav-previous, uk-slider-item="previous")
-                    a.uk-position-center-right.uk-position-small.uk-hidden-hover(href="#", uk-slidenav-next, uk-slider-item="next")
-
-                .uk-slider-nav.uk-dotnav.uk-flex-center.uk-margin.uk-light
-
-        include includes/footer.pug
+        p Hello world

@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": ".\\node_modules\\.bin\\gulp default",
-    "build": ".\\node_modules\\.bin\\gulp build",
-    "clean": ".\\node_modules\\.bin\\gulp clean"
+    "start": "npx gulp default",
+    "build": "npx gulp build",
+    "clean": "npx gulp clean"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
