@@ -8,41 +8,83 @@ html
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
         
-        link(href="css/vendor/uikit.min.css", rel="stylesheet")
+        link(href="css/vendor/bootstrap.min.css", rel="stylesheet")
         link(href="css/default.css", rel="stylesheet")
-
-        script(src="js/vendor/uikit.min.js")
-        script(src="js/vendor/uikit-icons.min.js")
 
         title Main Index
     body
-        nav.uk-navbar
-            //- should be on the right side
-            ul
-                li
-                    a(href="/") Homepage
-                li
-                    a(href="#") Blog
-                li
-                    a(href="#") My Works
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-2
+            a.navbar-brand(href="/") anditakaesar
+            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#mainNavbar")
+                span.navbar-toggler-icon
+
+            div.collapse.navbar-collapse#mainNavbar
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.nav-link(href="#") Home
+                    li.nav-item
+                        a.nav-link(href="#") Blog
+                    li.nav-item
+                        a.nav-link(href="#") Portofolio
         //- end nav
-        main
+        main.container-fluid.mb-10
             //- profile row
-            div
-                h3 #{myname}
-                p #{lorem1} (some short bio)
-                div
-                    ul
-                        li
-                            a(href="/") linkedin
-                        li
-                            a(href="/") github
-                        li
-                            a(href="/") twitter
-                        li
-                            a(href="/") telegram
-            //- works row
-            div
-                h3 My Works
-        footer
-            p &copy; #[a anditakaesar] 2020
+            .jumbotron.jumbotron-fluid
+                .container
+                    h1.display-4 #{myname}
+                    p.lead #{lorem1} (some short bio)
+                    .container-fluid
+                        .row
+                            a.col.btn.btn-outline-primary.m-3(href="#") linkedin
+                            a.col.btn.btn-outline-primary.m-3(href="#") github
+                            a.col.btn.btn-outline-primary.m-3(href="#") twitter
+                            a.col.btn.btn-outline-primary.m-3(href="#") telegram
+            .row
+                .container
+                    .row.col.h1.display-4 My Works
+                    .row
+                        #worksCarousel.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.active(data-target="#worksCarousel", data-slide-to="0")
+                                li(data-target="#worksCarousel", data-slide-to="1")
+                                li(data-target="#worksCarousel", data-slide-to="2")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block.w-100(src="img/background.jpg", alt="First Slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        h5 
+                                            a(href="#") First Slide
+                                        p #{lorem1}
+
+                                .carousel-item
+                                    img.d-block.w-100(src="img/background.jpg", alt="Second Slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        h5 
+                                            a(href="#") Second Slide
+                                        p #{lorem1}
+
+                                .carousel-item
+                                    img.d-block.w-100(src="img/background.jpg", alt="Third Slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        h5 
+                                            a(href="#") Third Slide
+                                        p #{lorem1}
+
+                            a.carousel-control-prev(href="#worksCarousel", role="button", data-slide="prev")
+                                span.carousel-control-prev-icon
+                                span.sr-only Previous
+                            
+                            a.carousel-control-next(href="#worksCarousel", role="button", data-slide="next")
+                                span.carousel-control-next-icon
+                                span.sr-only Next
+                        
+        footer.container-fluid.mb-2
+            .container
+                .row.justify-content-center
+                    .col
+                        p.text-center &copy; #[a anditakaesar] 2020
+        
+        script(src="js/vendor/jquery-3.4.1.slim.min.js")
+        script(src="js/vendor/popper.min.js")
+        script(src="js/vendor/bootstrap.min.js")
+        script(src="js/script.js")
