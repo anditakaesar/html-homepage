@@ -13,7 +13,7 @@ html
 
         title Main Index
     body
-        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-2
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a.navbar-brand(href="/") anditakaesar
             button.navbar-toggler(type="button", data-toggle="collapse", data-target="#mainNavbar")
                 span.navbar-toggler-icon
@@ -29,19 +29,13 @@ html
         //- end nav
         main.container-fluid
             //- profile row
-            .jumbotron.jumbotron-fluid
+            .row.py-2.mb-5
                 .container
-                    h1.display-4 #{myname}
+                    h1.display-4.my-5 #{myname}
                     p.lead #{lorem1} (some short bio)
-                    .container-fluid
-                        .row
-                            a.col.btn.btn-outline-primary.m-3(href="#") linkedin
-                            a.col.btn.btn-outline-primary.m-3(href="#") github
-                            a.col.btn.btn-outline-primary.m-3(href="#") twitter
-                            a.col.btn.btn-outline-primary.m-3(href="#") telegram
             .row.bg-light
                 .container
-                    .row.col.h1.display-4 My Works
+                    .row.col.h1.display-4.my-5 My Works
                     .row
                         #worksCarousel.carousel.slide(data-ride="carousel")
                             ol.carousel-indicators
@@ -78,11 +72,22 @@ html
                                 span.carousel-control-next-icon
                                 span.sr-only Next
                         
-        footer.container-fluid.mt-2.bg-dark.mb-2
-            .container
-                .row.justify-content-center.pt-2
-                    .col
-                        p.text-center.text-white &copy; #[a.text-white(href="#") anditakaesar] 2020
+        footer.container.p-5
+            .row.px-3
+                .col-sm-12.col-md-6.mb-2
+                    .list-group-flush
+                        a.list-group-item.list-group-item-action(href="#") Linkedin
+                        a.list-group-item.list-group-item-action(href="#") Github
+                        a.list-group-item.list-group-item-action(href="#") Twitter
+                        a.list-group-item.list-group-item-action(href="#") Telegram
+                .col-sm-12.col-md-6
+                    .card
+                        .card-body #{lorem1}
+                
+
+            .row.justify-content-center.p-3.bg-light.mt-5
+                .col
+                    p.text-center &copy; #[a.text-info(href="#") anditakaesar] 2020
         
         script(src="js/vendor/jquery-3.4.1.slim.min.js")
         script(src="js/vendor/popper.min.js")
