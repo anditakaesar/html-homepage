@@ -27,7 +27,7 @@ html
                     li.nav-item
                         a.nav-link(href="#") Portofolio
         //- end nav
-        main.container-fluid.mb-10
+        main.container-fluid
             //- profile row
             .jumbotron.jumbotron-fluid
                 .container
@@ -39,7 +39,7 @@ html
                             a.col.btn.btn-outline-primary.m-3(href="#") github
                             a.col.btn.btn-outline-primary.m-3(href="#") twitter
                             a.col.btn.btn-outline-primary.m-3(href="#") telegram
-            .row
+            .row.bg-light
                 .container
                     .row.col.h1.display-4 My Works
                     .row
@@ -53,21 +53,21 @@ html
                                     img.d-block.w-100(src="img/background.jpg", alt="First Slide")
                                     .carousel-caption.d-none.d-md-block
                                         h5 
-                                            a(href="#") First Slide
+                                            a.text-white(href="#") First Slide
                                         p #{lorem1}
 
                                 .carousel-item
                                     img.d-block.w-100(src="img/background.jpg", alt="Second Slide")
                                     .carousel-caption.d-none.d-md-block
                                         h5 
-                                            a(href="#") Second Slide
+                                            a.text-white(href="#") Second Slide
                                         p #{lorem1}
 
                                 .carousel-item
                                     img.d-block.w-100(src="img/background.jpg", alt="Third Slide")
                                     .carousel-caption.d-none.d-md-block
                                         h5 
-                                            a(href="#") Third Slide
+                                            a.text-white(href="#") Third Slide
                                         p #{lorem1}
 
                             a.carousel-control-prev(href="#worksCarousel", role="button", data-slide="prev")
@@ -78,11 +78,11 @@ html
                                 span.carousel-control-next-icon
                                 span.sr-only Next
                         
-        footer.container-fluid.mb-2
+        footer.container-fluid.mt-2.bg-dark.mb-2
             .container
-                .row.justify-content-center
+                .row.justify-content-center.pt-2
                     .col
-                        p.text-center &copy; #[a anditakaesar] 2020
+                        p.text-center.text-white &copy; #[a.text-white(href="#") anditakaesar] 2020
         
         script(src="js/vendor/jquery-3.4.1.slim.min.js")
         script(src="js/vendor/popper.min.js")
