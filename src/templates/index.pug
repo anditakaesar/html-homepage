@@ -1,95 +1,28 @@
 - var lorem0 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget, dignissim pulvinar est. Maecenas volutpat nisi viverra, molestie tortor id, dictum nisl. Donec lacus urna, congue ut tellus vel, maximus rhoncus ligula. Morbi varius eget elit quis posuere. Vestibulum ut erat gravida, luctus massa eget, condimentum urna. Sed id laoreet mi, at vulputate diam. Integer in sem sed nunc faucibus elementum. Suspendisse tempor est nec sem vehicula finibus. Praesent cursus dapibus odio, sit amet tempor neque vulputate vel. Aenean viverra, urna nec commodo aliquet, magna justo vulputate libero, vitae eleifend risus dui aliquet magna. Praesent sollicitudin mauris a dolor aliquet, sit amet convallis est rhoncus. Vivamus commodo purus eget massa aliquet vulputate. Nunc vitae nisi pretium, mollis tortor sit amet, dapibus magna. Sed faucibus nunc in sapien condimentum, eget aliquam lectus scelerisque. Donec dignissim augue eget lacus condimentum, ut blandit sapien dapibus. Donec egestas augue a malesuada dapibus. Morbi egestas arcu sem, viverra consequat quam tristique id. Nam id dictum elit. Vivamus non tortor vitae sapien iaculis cursus vel id velit. Vestibulum scelerisque nisl purus, sit amet tristique augue tincidunt at. Curabitur consequat nunc sit amet volutpat elementum. Donec ex ligula, rhoncus et nisi quis, commodo ullamcorper urna. Proin a magna vestibulum, gravida tellus a, imperdiet nulla. Suspendisse porttitor urna id lacus gravida imperdiet. Nam convallis massa in orci accumsan condimentum. Nullam diam orci, cursus vitae nunc et, vestibulum vulputate diam. Sed non vulputate ex, eget pretium urna. Aenean blandit viverra malesuada. Etiam viverra aliquet scelerisque. Suspendisse potenti. Cras at volutpat odio, in sollicitudin enim. In posuere mauris in magna feugiat varius. Duis ac dignissim sapien, at ultricies nisi. Etiam fermentum enim nisi, at consectetur ipsum pharetra at. Duis et dictum libero. Aliquam neque ligula, semper at varius non, dictum at sem. Cras pretium augue eu urna lacinia bibendum. Fusce iaculis tempor commodo. Aliquam blandit nunc sed finibus condimentum. Suspendisse eleifend mauris eget ligula ultricies, non finibus risus facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi semper libero sed nisi aliquet maximus. Nullam vestibulum turpis quis ligula maximus interdum. Donec vitae porttitor turpis, sed ornare neque. Maecenas et porttitor ligula. Sed vestibulum molestie venenatis. Suspendisse id augue non purus pellentesque semper. Pellentesque nunc eros, facilisis sed magna ut, vehicula volutpat massa. Pellentesque feugiat varius posuere. Praesent ac suscipit orci, vitae ullamcorper ipsum. Cras at mi diam. Integer pretium mauris vel ullamcorper sagittis. Vestibulum tempor id enim id placerat. Proin rhoncus non arcu vitae mollis. Donec pretium mauris vel enim viverra, ac maximus urna aliquet. Integer sed libero pharetra quam tempus tincidunt. Phasellus nec commodo metus. Cras ac ex maximus, tincidunt diam quis, efficitur felis. Praesent ut condimentum mauris."
 - var lorem1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor maximus, pretium libero id, vehicula neque. Aliquam leo felis, commodo in libero eget, dignissim pulvinar est. Maecenas volutpat nisi viverra, molestie tortor id, dictum nisl. Donec lacus urna, congue ut tellus vel, maximus rhoncus ligula. Morbi varius eget elit quis posuere. "
 - var myname = "Andita Kaesar"
+- var title = "Homepage"
 
 doctype html
 html
-    head
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        
-        link(href="css/vendor/bootstrap.min.css", rel="stylesheet")
-        link(href="css/default.css", rel="stylesheet")
-
-        title Main Index
+    include includes/head.pug
     body
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href="/") anditakaesar
-            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#mainNavbar")
-                span.navbar-toggler-icon
-
-            div.collapse.navbar-collapse#mainNavbar
-                ul.navbar-nav.mr-auto
-                    li.nav-item
-                        a.nav-link(href="#") Home
-                    li.nav-item
-                        a.nav-link(href="#") Blog
-                    li.nav-item
-                        a.nav-link(href="#") Portofolio
+      include includes/homepagetopnav.pug
         //- end nav
-        main.container-fluid
-            //- profile row
-            .row.py-2.mb-5
-                .container
-                    h1.display-4.my-5 #{myname}
-                    p.lead #{lorem1} (some short bio)
-            .row.bg-light
-                .container
-                    .row.col.h1.display-4.my-5 My Works
-                    .row
-                        #worksCarousel.carousel.slide(data-ride="carousel")
-                            ol.carousel-indicators
-                                li.active(data-target="#worksCarousel", data-slide-to="0")
-                                li(data-target="#worksCarousel", data-slide-to="1")
-                                li(data-target="#worksCarousel", data-slide-to="2")
-                            .carousel-inner
-                                .carousel-item.active
-                                    img.d-block.w-100(src="img/background.jpg", alt="First Slide")
-                                    .carousel-caption.d-none.d-md-block
-                                        h5 
-                                            a.text-white(href="#") First Slide
-                                        p #{lorem1}
+      main.container-fluid
+        //- profile row
+        include index/alert.pug
 
-                                .carousel-item
-                                    img.d-block.w-100(src="img/background.jpg", alt="Second Slide")
-                                    .carousel-caption.d-none.d-md-block
-                                        h5 
-                                            a.text-white(href="#") Second Slide
-                                        p #{lorem1}
-
-                                .carousel-item
-                                    img.d-block.w-100(src="img/background.jpg", alt="Third Slide")
-                                    .carousel-caption.d-none.d-md-block
-                                        h5 
-                                            a.text-white(href="#") Third Slide
-                                        p #{lorem1}
-
-                            a.carousel-control-prev(href="#worksCarousel", role="button", data-slide="prev")
-                                span.carousel-control-prev-icon
-                                span.sr-only Previous
-                            
-                            a.carousel-control-next(href="#worksCarousel", role="button", data-slide="next")
-                                span.carousel-control-next-icon
-                                span.sr-only Next
-                        
-        footer.container.p-5
-            .row.px-3
-                .col-sm-12.col-md-6.mb-2
-                    .list-group-flush
-                        a.list-group-item.list-group-item-action(href="#") Linkedin
-                        a.list-group-item.list-group-item-action(href="#") Github
-                        a.list-group-item.list-group-item-action(href="#") Twitter
-                        a.list-group-item.list-group-item-action(href="#") Telegram
-                .col-sm-12.col-md-6
-                    .card
-                        .card-body #{lorem1}
+        .row.py-2.mb-5
+          .container
+            h1.display-4.my-5 #{myname}
+            p.lead #{lorem1} (some short bio)
+        .row.bg-light
+          .container
+            .row.col.h1.display-4.my-5 My Works
+            .row
+              include index/workscarousel.pug
                 
-
-            .row.justify-content-center.p-3.bg-light.mt-5
-                .col
-                    p.text-center &copy; #[a.text-info(href="#") anditakaesar] 2020
-        
-        script(src="js/vendor/jquery-3.4.1.slim.min.js")
-        script(src="js/vendor/popper.min.js")
-        script(src="js/vendor/bootstrap.min.js")
-        script(src="js/script.js")
+      include index/footer.pug
+    
+      include includes/footerscripts.pug

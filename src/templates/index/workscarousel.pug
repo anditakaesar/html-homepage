@@ -1,0 +1,35 @@
+#worksCarousel.carousel.slide(data-ride="carousel")
+  ol.carousel-indicators
+    li.active(data-target="#worksCarousel", data-slide-to="0")
+    li(data-target="#worksCarousel", data-slide-to="1")
+    li(data-target="#worksCarousel", data-slide-to="2")
+
+  .carousel-inner
+    .carousel-item.active
+      img.d-block.w-100(src="/img/background.jpg", alt="First Slide")
+      .carousel-caption.d-none.d-md-block
+        h5 
+          a.text-white(href="#") First Slide
+        p #{lorem1}
+
+    .carousel-item
+      img.d-block.w-100(src="/img/background.jpg", alt="Second Slide")
+      .carousel-caption.d-none.d-md-block
+        h5 
+          a.text-white(href="#") Second Slide
+        p #{lorem1}
+
+    .carousel-item
+      img.d-block.w-100(src="/img/background.jpg", alt="Third Slide")
+      .carousel-caption.d-none.d-md-block
+        h5 
+          a.text-white(href="#") Third Slide
+        p #{lorem1}
+
+  a.carousel-control-prev(href="#worksCarousel", role="button", data-slide="prev")
+    span.carousel-control-prev-icon
+    span.sr-only Previous
+  
+  a.carousel-control-next(href="#worksCarousel", role="button", data-slide="next")
+    span.carousel-control-next-icon
+    span.sr-only Next

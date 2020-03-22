@@ -1,0 +1,16 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href="/") anditakaesar
+  button.navbar-toggler(type="button", data-toggle="collapse", data-target="#mainNavbar")
+    span.navbar-toggler-icon
+
+  div.collapse.navbar-collapse#mainNavbar
+    ul.navbar-nav.mr-auto
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle(href="#", id="adminNavbar", role="button", data-toggle="dropdown") Admin
+        .dropdown-menu(aria-labelledby="navbarDropdown")
+          a.dropdown-item(href="/admin.html") Main Admin
+          a.dropdown-item(href="/admin-dashboard.html") Dashboard
+      li.nav-item
+        a.nav-link(href="#") Blog
+      li.nav-item
+        a.nav-link(href="#") Portofolio
